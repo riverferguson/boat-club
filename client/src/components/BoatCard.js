@@ -15,11 +15,11 @@ const {id, make, model, description, image, location: {city, state}} = boat
 
   return (
     <Container maxWidth="sm">
-    <Card sx={{ maxWidth: 345, margin: '80px'}}>
+    <Card sx={{ maxWidth: 545, margin: '40px' }}>
       <CardMedia
         component="img"
         alt={model}
-        height="140"
+        height="440"
         src={image}
       />
       <CardContent>

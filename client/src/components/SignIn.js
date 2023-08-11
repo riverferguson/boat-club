@@ -17,18 +17,7 @@ import {useHistory} from 'react-router-dom'
 
 const defaultTheme = createTheme();
 
-function Copyright(props) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+
 
 function SignIn({ onSign }){
   const [username, setUsername] = useState("")
@@ -100,10 +89,6 @@ function SignIn({ onSign }){
                 autoComplete="current-password"
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
-              />
               <Button
                 type="submit"
                 fullWidth
@@ -113,11 +98,6 @@ function SignIn({ onSign }){
                 Sign In
               </Button>
               <Grid container>
-                <Grid item xs>
-                  <Link href="#" variant="body2">
-                    Forgot password?
-                  </Link>
-                </Grid>
                 <Grid item>
                   <Link to='/signup' href="#" variant="body2">
                     {"Don't have an account? Sign Up"}
@@ -126,7 +106,6 @@ function SignIn({ onSign }){
               </Grid>
             </Box>
           </Box>
-          <Copyright sx={{ mt: 8, mb: 4 }} />
         </Container>
       </ThemeProvider>
     )

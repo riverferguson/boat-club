@@ -96,13 +96,13 @@ if __name__ == '__main__':
         db.session.commit()
         
         
-        o1 = Owner(first_name='River', last_name='Ferguson', bio='Hello, my name is River and I am a boat enthusiast with a vast love of for the ocean.', email='river@gmail.com', username='BigDawg69', password=generate_password_hash('12345', method='scrypt'))
+       
         o2 = Owner(first_name='Jim', last_name='Lahey', bio='Hey my name is Jim, thanks for taking a look at my listing!', email='guy@gmail.com', username='Guy32', password=generate_password_hash('12345', method='scrypt'))
         o3 = Owner(first_name='Buddy', last_name='Lannister', bio='My name is Buddy and I am here to check out all the boats!', email='BuddyRunsPropane2U@comcast.net', username='Buddys Propane and Boats', password=generate_password_hash('12345', method='scrypt'))
         o4 = Owner(first_name='Dirk', last_name='Wilson', bio='Hello, I am Dirk and I am interested in buying a yacht', email='Dirk@yahoo.com', username='Dirk42', password=generate_password_hash('12345', method='scrypt'))
         o5 = Owner(first_name='Drew', last_name='Womble', bio='Hey, my name is Drew and I am looking into buying my first boat', email='drew@gmail.com', username='drew27', password=generate_password_hash('12345', method='scrypt'))
         
-        owners = [o1, o2, o3, o4, o5]
+        owners = [o2, o3, o4, o5]
         db.session.add_all(owners)
         db.session.commit()
         
