@@ -104,7 +104,7 @@ function App() {
           <BoatForm addBoat={addBoat} />
         </Route>
         <Route exact path="/boats/:id">
-          <BoatDetails handleEdit={handleEdit} deleteBoat={deleteBoat} location={location} owners={owners}/>
+          <BoatDetails handleEdit={handleEdit} deleteBoat={deleteBoat} location={location} owners={owners} user={user}/>
         </Route>
         <Route exact path="/boats/edit/:id">
           <BoatEdit boatEdit={boatEdit} updateBoat={updateBoat}  />

@@ -17,11 +17,13 @@ const Nav = ({ user }) => {
                   <li className='nav-link-wrapper'>
                   <Link to="/owners">Members</Link>
                   </li>
-    
+                    {user ?
+                  <>
                   <li className='nav-link-wrapper'>
                   <Link to='/boats/new'>Sell</Link>
                   </li>
-
+                  </>
+                      : null}
                   <li className='nav-link-wrapper'>
                   <Link to={user ? "/signout" : "/signin"}>
                     {user ? "SignOut" : "SignIn"}

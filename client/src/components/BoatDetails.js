@@ -11,13 +11,12 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 
-const BoatDetails = ({ deleteBoat, handleEdit}) => {
+const BoatDetails = ({ deleteBoat, handleEdit, user}) => {
   const [newBoat, setNewBoat] = useState([]);
   const { id } = useParams();
   const history = useHistory();
   const [error, setError] = useState(null);
   const { make, model, description, image, price, location, owner} = newBoat;
-  // const [cookies, setCookies, removeCookies] = useCookies(['currentUser'])
   
   debugger
   useEffect(() => {
@@ -77,12 +76,16 @@ const BoatDetails = ({ deleteBoat, handleEdit}) => {
           </Typography>
         </CardContent>
         <CardActions>
+          {user ?
           <Button size="small" onClick={() => handleEdit(newBoat)}>
             Edit Listing
           </Button>
+          : null}
+          {user ?
           <Button size="small" onClick={handleDelete}>
             Remove Listing
           </Button>
+          : null}
         </CardActions>
       </Card>
     </Container>

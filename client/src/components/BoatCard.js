@@ -26,6 +26,9 @@ const {id, make, model, description, image, location: {city, state}} = boat
         <Typography gutterBottom variant="h5" component="div">
           Make: {make}
         </Typography>
+        <Typography gutterBottom variant="h5" component="div">
+          Model: {model}
+        </Typography>
         <Typography variant="body2" color="text.secondary">
         {description}
         </Typography>
