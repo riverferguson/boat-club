@@ -93,7 +93,7 @@ function App() {
     <main>
       <Nav user={user} />
       <Switch>
-        <Route exact path="/boats">
+        <Route exact path="/">
           <Search setSearchMake={setSearchMake} setSearchModel={setSearchModel} />
           <BoatPage boats={filteredBoats} owners={owners}/>
         </Route>

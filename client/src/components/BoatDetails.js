@@ -18,7 +18,6 @@ const BoatDetails = ({ deleteBoat, handleEdit, user}) => {
   const [error, setError] = useState(null);
   const { make, model, description, image, price, location, owner} = newBoat;
   
-  debugger
   useEffect(() => {
     fetch(`/boats/${id}`)
       .then((resp) => resp.json())

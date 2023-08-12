@@ -10,8 +10,7 @@ function SignOut({ onSign }){
         }).then((r) => {
             if(r.ok){
                 onSign(null)
-                alert('Sign out successful, returning to home....')
-                history.push('/boats')
+                history.push('/')
             } else {
                 alert('Something went wrong. Please try again')
             }

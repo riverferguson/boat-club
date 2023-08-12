@@ -5,24 +5,22 @@ const Nav = ({ user }) => {
   
     return (
         <nav className="nav">
-        <Link to="/boats" className="site-title">
+        <Link to="/" className="site-title">
         <img className='logo' src={process.env.PUBLIC_URL + "/images/logo.jpg"} alt='oops'/> 
         <span className='shop-name'>&nbsp; Pacific Boat Club</span>
               </Link>
               <ul>
                   <li className='nav-link-wrapper'>
-                  <Link to="/boats">  Boats </Link>
+                  <Link to="/">  Boats </Link>
                   </li>
     
                   <li className='nav-link-wrapper'>
                   <Link to="/owners">Members</Link>
                   </li>
                     {user ?
-                  <>
                   <li className='nav-link-wrapper'>
                   <Link to='/boats/new'>Sell</Link>
                   </li>
-                  </>
                       : null}
                   <li className='nav-link-wrapper'>
                   <Link to={user ? "/signout" : "/signin"}>
