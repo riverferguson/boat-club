@@ -38,7 +38,6 @@ function SignIn({ onSign }){
         .then((r) => {
             if(r.ok){
                 r.json().then(data => onSign([...data]))
-                alert('You have been signed in, returning to home...')
                 history.push('/boats')
             } else {
                 alert('Invalid Credentials')
